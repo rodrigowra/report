@@ -17,7 +17,7 @@ pdflatex main.tex
 ```bash
 sudo apt-get install texlive-full
 ```
-LaTeX
+LaTeX main.tex
 -----
 <!---
 Add the contents of `myfile.tex` into your LaTeX source code, for example using `\input{myfile.tex}`. 
