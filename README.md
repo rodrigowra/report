@@ -19,8 +19,9 @@ sudo apt-get install texlive-full
 ```
 LaTeX
 -----
-Add the contents of `myfile.tex` into your LaTeX source code, for example using `\input{myfile.tex}`. 
+<!---Add the contents of `myfile.tex` into your LaTeX source code, for example using `\input{myfile.tex}`. 
 Make sure that the required packages (such as `pgfplots`) are loaded in the preamble of your document as in the example:
+-->
 
 ```latex
 \documentclass{article}
