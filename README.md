@@ -1,8 +1,8 @@
-# LaTeX Template Report
+# LaTeX Report
 
 * `View`: [main.pdf](https://github.com/rodrigowra/report/blob/master/main.pdf)
 
-* `The report can be downloaded at` : <https://github.com/rodrigowra/report.git>
+* `The report can be downloaded at` : <https://github.com/rodrigowra/report/archive/master.zip>
 
 ### Usage
 
@@ -17,7 +17,7 @@ pdflatex main.tex
 ```bash
 sudo apt-get install texlive-full
 ```
-LaTeX main.tex
+main.tex
 -----
 <!---
 Add the contents of `myfile.tex` into your LaTeX source code, for example using `\input{myfile.tex}`. 
