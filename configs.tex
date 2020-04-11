@@ -1,0 +1,194 @@
+% \usepackage{cmap}		
+%\usepackage[utf8]{inputenc}		
+\usepackage[TS1,T1]{fontenc}
+\usepackage[utf8]{luainputenc}	
+\usepackage[english,brazil]{babel}
+\usepackage{framed}
+% \usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{indentfirst}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{pgfgantt}
+\usepackage{lipsum}
+\usepackage[colorlinks=true,
+      plainpages=true,
+      citecolor=blue,
+      urlcolor=blue,
+      linkcolor=blue]
+      {hyperref}
+% set document font, font sizes, margin dimensions and spacing
+\usepackage{fourier}
+\usepackage[T1]{fontenc}
+\urlstyle{sam}
+%\usepackage{fontspec}
+%%\setmainfont{Arial}
+%\setmainfont{Tex Gyre Termes}
+
+\usepackage[top=25mm,bottom=25mm,left=20mm,right=25mm]{geometry}
+\usepackage{setspace}\onehalfspacing
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+\setlength{\parskip}{0.6em}
+\usepackage{pdfpages}
+\usepackage{todonotes}
+\usepackage{epstopdf}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% \renewcommand{\sectionmark}[1]{\markboth{}{\thesection\ \ #1}}
+\renewcommand{\sectionmark}[1]{\markboth{}{Capitulo~\thesection. \ #1}}
+% \renewcommand{\sectionmark}[1]{\markboth{}{ \ #1}}
+\setlength\headheight{15pt}   
+% \fancyhead[L]{\normalfont\bfseries Report IC Brazil}
+% \fancyhead[R]{\rightmark}    
+%  \fancyhead[L]{\itshape Conversores nos Domínios Tempo e Frequência}                  % No page header
+% \fancyfoot[L]{\normalfont\bfseries Mixed-Signal IC Design}%{\today} %ex:\rhead{Capítulo \thechapter}  \leftmark or \rightmark     % Empty 
+% \fancyfoot[C]{} %\today                     % Empty
+\fancyfoot[C]{\normalfont\bfseries \thepage}                % Pagenumbering
+\renewcommand{\headrulewidth}{0.4pt}      % Remove header underlines
+\renewcommand{\footrulewidth}{0.4pt}        % Remove footer underlines
+\setlength{\headheight}{13.6pt}
+
+
+
+\newif\ifblackandwhite
+\blackandwhitetrue
+
+\usepackage{etoolbox}
+\usepackage{longtable}%
+\AtBeginEnvironment{longtable}{%
+  \addfontfeature{RawFeature=+tnum;-onum}%  <--- requires LuaTeX
+}
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
+%\usepackage[svgnames]{xcolor}
+ \usepackage{colortbl}%
+   \newcommand{\myrowcolour}{\rowcolor[gray]{0.925}}
+\usepackage{booktabs}
+
+\ifblackandwhite
+  \newcommand{\cheading}[2]{\textbf{#1\hfill #2}}
+  \newcommand{\highest}[1]{\textbf{#1}}% == highest score for question
+\else
+  \newcommand{\cheading}[2]{\textcolor{Maroon}{\textbf{#1\hfill #2}}}
+  \newcommand{\highest}[1]{\textcolor{Maroon}{\textbf{#1}}}%
+\fi
+
+\definecolor{mygray}{rgb}{0.4,0.4,0.4}
+\definecolor{mygreen}{rgb}{0,0.8,0.6}
+\definecolor{myorange}{rgb}{1.0,0.4,0}
+
+
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\definecolor{my}{RGB}{170,170,170}
+%
+\lstset{language=Matlab,%
+frame=top,frame=bottom,
+    %basicstyle=\color{red},
+    breaklines=true,%
+%    backgroundcolor=\color{my},
+    %basicstyle=\scriptsize\ttfamily,
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    %emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},  
+    inputencoding=latin1,  
+        literate=%
+        {é}{{\'{e}}}1
+        {è}{{\`{e}}}1
+        {ê}{{\^{e}}}1
+        {ë}{{\¨{e}}}1
+        {É}{{\'{E}}}1
+        {Ê}{{\^{E}}}1
+        {û}{{\^{u}}}1
+        {ù}{{\`{u}}}1
+        {â}{{\^{a}}}1
+        {à}{{\`{a}}}1
+        {á}{{\'{a}}}1
+        {ã}{{\~{a}}}1
+        {Á}{{\'{A}}}1
+        {Â}{{\^{A}}}1
+        {Ã}{{\~{A}}}1
+        {ç}{{\c{c}}}1
+        {Ç}{{\c{C}}}1
+        {õ}{{\~{o}}}1
+        {ó}{{\'{o}}}1
+        {ô}{{\^{o}}}1
+        {Õ}{{\~{O}}}1
+        {Ó}{{\'{O}}}1
+        {Ô}{{\^{O}}}1
+        {î}{{\^{i}}}1
+        {Î}{{\^{I}}}1
+        {í}{{\'{i}}}1
+        {Í}{{\~{Í}}}1
+        {Ú}{{\'U}}1
+        {ú}{{\'u}}1
+        {Ü}{{\"U}}1
+        {ü}{{\"u}}1     
+}
+\usepackage[export]{adjustbox} 
+%\lstdefinestyle{customc}{
+%  belowcaptionskip=1\baselineskip,
+%  breaklines=true,
+%  frame=L,
+%  xleftmargin=\parindent,
+%  language=C,
+%  showstringspaces=false,
+%  basicstyle=\footnotesize\ttfamily,
+%  keywordstyle=\bfseries\color{green!40!black},
+%  commentstyle=\itshape\color{purple!40!black},
+%  identifierstyle=\color{blue},
+%  stringstyle=\color{orange},
+%  numbers=left,
+%  numbersep=12pt,
+%  numberstyle=\small\color{mygray},
+%}
+%\lstset{escapechar=@,style=customc}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%Definindo um comando todoin que aceita quebra de linha e fórmulas
+\newcommand\todoin[2][]{\todo[inline, caption={2do}, #1]{
+\begin{minipage}{\textwidth-4pt}#2\end{minipage}}}
+
+\newcommand\todogeg[2][]{\todo[inline, caption={#2}, color=yellow!100, #1]{
+\begin{minipage}{\textwidth-4pt}#2\end{minipage}}}
+
+\newcommand\todovwcm[2][]{\todo[inline, caption={#2}, color=red!100, #1]{
+\begin{minipage}{\textwidth-4pt}#2\end{minipage}}}
+
+
+\titleformat{\section}
+{\centering\Large\scshape}{}{1em}{}
+% {\centering\huge\scshape}{\thesection}{1em}{}
+
+
+\titleformat{\subsection}
+{\centering\normalsize\scshape}{}{1em}{}
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFormat{listing}{\rule{\dimexpr\textwidth+17pt\relax}{0.4pt}\par\vskip1pt#1#2#3}
+\captionsetup[lstlisting]{format=listing,singlelinecheck=false, margin=0pt, font={sf},labelsep=space,labelfont=bf}
+\renewcommand{\lstlistingname}{Código}
