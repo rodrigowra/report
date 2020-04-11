@@ -1,15 +1,15 @@
 # LaTeX Template Report
 
-* `View`: [Model-Report.pdf](https://github.com/rodrigowra/Report-LaTeX/blob/master/Report.pdf)
+* `View`: [main.pdf](https://github.com/rodrigowra/report/blob/master/main.pdf)
 
-* `The report can be downloaded at` : <https://github.com/rodrigowra/Report-LaTeX.git>
+* `The report can be downloaded at` : <https://github.com/rodrigowra/report.git>
 
 ### Usage
 
 ```bash
-pdflatex Model-Report.tex
-bibtex Model-Report.tex
-pdflatex Model-Report.tex
+pdflatex main.tex
+bibtex main.tex
+pdflatex main.tex
 ```
 
 ### Dependencies
@@ -19,28 +19,39 @@ sudo apt-get install texlive-full
 ```
 LaTeX
 -----
+<!---
 Add the contents of `myfile.tex` into your LaTeX source code, for example using `\input{myfile.tex}`. 
 Make sure that the required packages (such as `pgfplots`) are loaded in the preamble of your document as in the example:
-
+-->
 ```latex
-\documentclass{article}
-
-  \usepackage{pgfplots}
-  \pgfplotsset{compat=newest}
-  %% the following commands are needed for some matlab2tikz features
-  \usetikzlibrary{plotmarks}
-  \usetikzlibrary{arrows.meta}
-  \usepgfplotslibrary{patchplots}
-  \usepackage{grffile}
-  \usepackage{amsmath}
-
-  %% you may also want the following commands
-  %\pgfplotsset{plot coordinates/math parser=false}
-  %\newlength\figureheight
-  %\newlength\figurewidth
-
+\documentclass[a4paper,11pt]{article}
+\input{configs.tex}
 \begin{document}
-  \input{myfile.tex}
+\input{title.tex}
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Introdução}
+\section{Section 1}
+\section{Section 2}
+\section{Section 3}
+\section{Conclusão}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%to insert references
+\nocite{ams} 
+\addcontentsline{toc}{section}{Referências}
+\renewcommand\refname{Referências}
+%\bibliographystyle{abntex2-alf}
+\bibliographystyle{plain}
+\thispagestyle{empty}
+\bibliography{referencias}
+\thispagestyle{empty}
+%\listoftodos
+%Example text \todo{Mude aqui} and more text
+%\listoftodos[List of suggested changes]
 \end{document}
 ```
 <!---*#### Packages
