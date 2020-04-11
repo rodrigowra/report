@@ -24,41 +24,37 @@ Make sure that the required packages (such as `pgfplots`) are loaded in the prea
 -->
 
 ```latex
-\documentclass{article}
 
-  \usepackage{pgfplots}
-  \pgfplotsset{compat=newest}
-  %% the following commands are needed for some matlab2tikz features
-  \usetikzlibrary{plotmarks}
-  \usetikzlibrary{arrows.meta}
-  \usepgfplotslibrary{patchplots}
-  \usepackage{grffile}
-  \usepackage{amsmath}
-
-  %% you may also want the following commands
-  %\pgfplotsset{plot coordinates/math parser=false}
-  %\newlength\figureheight
-  %\newlength\figurewidth
-
+\documentclass[a4paper,11pt]{article}
+\input{configs.tex}
 \begin{document}
-  \input{myfile.tex}
+
+\input{title.tex}
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Introdução}
+\section{Section 1}
+\section{Section 2}
+\section{Section 3}
+\section{Conclusão}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%to insert references
+\nocite{Allen} 
+
+\addcontentsline{toc}{section}{Referências}
+\renewcommand\refname{Referências}
+%\bibliographystyle{abntex2-alf}
+\bibliographystyle{plain}
+\thispagestyle{empty}
+\bibliography{referencias}
+\thispagestyle{empty}
+%\listoftodos
+%Example text \todo{Mude aqui} and more text
+%\listoftodos[List of suggested changes]
 \end{document}
 ```
-<!---*#### Packages
-
-<!---** `amsmath` :Math library
-<!---** `amsfonts` : Math Fonts
-<!---** `amssymb`: Math Symbols
-<!---** `inputenc`: Input of accents, special characters
-<!---** `fontenc`: font
-<!---** `url`: Use urls
-<!---** `hyperref`: destaca links, citações e referências cruzadas,
-<!---** `graphicx`: inserção de imagens
-<!---** `parskip`: espaço extra entre parágrafos
-<!---** `caption`: personaliza o espaço entre a legenda e a figura/fonte
-<!---** `microtype`: faz com que o título tenha um espaço maior entre as letras
-<!---** `fancyhdr`: cabeçalhos e rodapés
-<!---** `titlesec`: personalização dos títulos
-<!---** `setspace`: permite aumentar o espaço entre os títulos das seções
-<!---** `natbib`: bibliografia
-<!---* `geometry`: margens
