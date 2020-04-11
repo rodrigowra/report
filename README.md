@@ -54,21 +54,3 @@ Make sure that the required packages (such as `pgfplots`) are loaded in the prea
 %\listoftodos[List of suggested changes]
 \end{document}
 ```
-<!---*#### Packages
-
-<!---** `amsmath` :Math library
-<!---** `amsfonts` : Math Fonts
-<!---** `amssymb`: Math Symbols
-<!---** `inputenc`: Input of accents, special characters
-<!---** `fontenc`: font
-<!---** `url`: Use urls
-<!---** `hyperref`: destaca links, citações e referências cruzadas,
-<!---** `graphicx`: inserção de imagens
-<!---** `parskip`: espaço extra entre parágrafos
-<!---** `caption`: personaliza o espaço entre a legenda e a figura/fonte
-<!---** `microtype`: faz com que o título tenha um espaço maior entre as letras
-<!---** `fancyhdr`: cabeçalhos e rodapés
-<!---** `titlesec`: personalização dos títulos
-<!---** `setspace`: permite aumentar o espaço entre os títulos das seções
-<!---** `natbib`: bibliografia
-<!---* `geometry`: margens
